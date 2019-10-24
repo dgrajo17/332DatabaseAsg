@@ -1,0 +1,84 @@
+Display all members of a particular organizing sub-committee
+select name
+from committeemembers
+where ID in (
+select memberID
+from memberoncommittee
+where committeeID in(
+select committeeID
+from committees
+where committeeName ="?")
+)
+
+For a particular hotel room, list all of the students housed in this room
+select name
+from attendees, students
+where attendees.ID = students.ID and roomNumber = ?
+
+Display the conference schedule for a particular day
+select name, sessionName, startTime, endTime, roomLocation
+from attendees, speaks, sessions
+where attendees.ID = speaks.speakerID and speaks.sessionID = sessions.sessionID and day = ?
+
+List the sponsors (company name) and their level of sponsorship (almost)
+select companyName, sponsorLevel
+from company
+
+For a particular company, list the jobs that they have available
+select jobTitle, province, city, payRate
+from jobads
+where companyName = ?
+
+List all jobs available
+select jobTitle, province, city, payRate
+from jobads
+
+List students
+select name, schoolName, program, roomNumber
+from attendees, students
+where attendees.ID = students.ID
+
+List professionals
+select name, jobTitle
+from attendees, professionals
+where attendees.ID = professionals.ID
+
+List sponsors
+select name, companyName
+from attendees, sponsors
+where attendees.ID = sponsors.ID
+
+Show total intake 
+Registration
+select sum(fee)
+from attendees
+
+select count(sponsorLevel)
+from company
+where sponsorLevel = "Bronze";
+
+select count(sponsorLevel)
+from company
+where sponsorLevel = "Silver";
+
+select count(sponsorLevel)
+from company
+where sponsorLevel = "Gold";
+
+select count(sponsorLevel)
+from company
+where sponsorLevel = "Platinum";
+
+
+Delete sponsors and attendees
+delete from attendees
+where attendees.ID in(
+select ID
+from sponsors
+where companyName = "Deloitte");
+
+delete from company
+where companyName = "Deloitte";
+
+select *
+from attendees natural join sponsors natural join company

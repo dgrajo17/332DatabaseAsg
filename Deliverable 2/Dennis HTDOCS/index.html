@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="firstPage.css" type="text/css" rel="stylesheet" >
+</head>
+
+<body>
+<h1>My First Web Page</h1>
+<h2>This is a sub-title</h2>
+<p>Hello there!  Thank you for visiting!</p>
+<ul>
+<li>CISC 332</li>
+<li>CISC 499</li>
+</ul>
+<a href="https://www.cs.queensu.ca">This is a link</a> 
+<table> 
+     <tr><th>Name</th><th>Age</th></tr>
+	<tr><td>Bob</td><td>49</td></tr> 
+	<tr><td>Cindy</td><td>50</td></tr>
+</table>
+<br>
+<br>
+
+<form action="firstphp.php" method="post">
+<p>First name:</p>
+<input type="text" name="firstname">
+<br>
+<p>Last name:</p>
+<input type="text" name="lastname"><br>
+<p>Dept Name:</p>
+<input type="text" name="deptname"><br><br>
+<input type="submit">
+</form> 
+
+<form action="subcomdrop.php" method="post">
+	<p>
+	Display sub-committee?
+	<select name ="formSubCom">
+		<option value ="">Select Sub-Comittee</option>
+		<option value ="Ticket Entrance Committee">Ticket Entrance</option>
+		<option value ="Advertisement Committee">Advertisement</option>
+		<option value ="Budget Committee">Budget</option>
+	</select>
+	</p>
+	<input type="submit">
+</form>
+
+<form action="hotel.php" method="post">
+	<p>Enter Hotel Room:</p>
+	<input type="text" name="hotelroom">
+	<input type="submit">
+</form>
+
+<form action="dayschedule.php" method="post">
+	<p>
+	Please select the day that you want to see the schedule for.
+	<select name ="formDaySched">
+		<option value ="">Select Day</option>
+		<option value ="1">Day 1</option>
+		<option value ="2">Day 2</option>
+		<option value ="3">Day 3</option>
+	</select>
+	</p>
+	<input type="submit">
+</form>
+
+<a href="sponsors.php"> A list of the sponsors </a>
+
+<form action="companyjobs.php" method="post">
+	<p>
+	Please select the company you want to see jobs for.
+	<select name ="formCompanyJobs">
+		<option value ="">Select Company</option>
+		<option value ="Clarke Pub">Clarke Pub</option>
+		<option value ="Deloitte">Deloitte</option>
+		<option value ="Faskens">Faskens</option>
+	</select>
+	</p>
+	<input type="submit">
+</form>
+
+<a href="alljobs.php"> A list of all available jobs </a>
+
+<form action="attendeeslist.php" method="post">
+	<p>
+	Please select which demographic you wish to view.
+	<select name ="formAttendees">
+		<option value ="">Select attendee type</option>
+		<option value ="students">Student</option>
+		<option value ="professionals">Professional</option>
+		<option value ="sponsors">Sponsor</option>
+	</select>
+	</p>
+	<input type="submit">
+</form>
+
+<form action="addattendee2.php" method="post">
+<p>Name:</p>
+<input type="text" name="givenName">
+<br>
+	Attendee Type.
+	<select name ="formAttendees">
+		<option value ="">Select attendee type</option>
+		<option value ="students">Student</option>
+		<option value ="professionals">Professional</option>
+		<option value ="sponsors">Sponsor</option>
+	</select>
+</p><br><br>
+<input type="submit">
+</form> 
+
+<form action="addcompany.php" method="post">
+<p>Name:</p>
+<input type="text" name="addName">
+<br>
+	What is the company's sponsor level?
+	<select name ="formLevel">
+		<option value ="">Select attendee type</option>
+		<option value ="Bronze">Bronze</option>
+		<option value ="Silver">Silver</option>
+		<option value ="Gold">Gold</option>
+		<option value ="Platinum">Platinum</option>
+	</select>
+</p><br><br>
+<input type="submit">
+</form> 
+
+<form action="deletesponsor.php" method="post">
+	<p>
+	Please select which sponsoring company to delete.
+	<select name ="formDelComp">
+		<option value ="">Select company to delete</option>
+		<option value ="Clarke Pub">Clarke Pub</option>
+		<option value ="Deloitte">Deloitte</option>
+		<option value ="Faskens">Faskens</option>
+	</select>
+	</p>
+	<input type="submit">
+</form>
+
+</body>
+</html> 
